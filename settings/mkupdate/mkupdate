@@ -1,0 +1,4 @@
+#!/bin/bash
+source /home/martin/anaconda3/bin/activate update_conf
+
+python3 /home/martin/anaconda3/envs/update_conf/MyScripts/Main_update_conf.py

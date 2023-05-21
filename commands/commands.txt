@@ -1,0 +1,57 @@
+##### Shell Befehle commands #####
+
+## Allgemein ##
+
+# Beipiel zu Befehlen
+tldr [command] - Beispielhilfe für Befehle
+ ==> tldr -u -update befehlsatz
+
+# kopieren #
+[ls] | xclip -sel clip --> Ergebniss aus Shellbefehl in die zwischenablage
+kopieren
+
+# Größe von Ordnern
+du -h {} : du = disk usage -h human readable
+
+# System info
+neofetch - Infoausgabe zum System
+top - anzeige der laufenden prozesse
+lsblk - angeschlossene Geräte anzeigen
+
+# Installierte Packete
+dpkg -l | grep text = liste von paketen mit text anzeigen
+
+# Matrix screen - fun
+cmatrix - matrix Bildschirmsafer
+
+# schnelles ordner springen
+j - [ordner] (autojump) springe zu einem bereits besuchten verzeichnils
+
+### Backup
+
+# rsync
+--dry-run = test run
+sudo rsync -aAXv --delete (--dry-run) --exclude=/home/martin/.cache/* --exclude=/media/* --exclude=/mnt/* --exclude=/run/* --exclude=/dev/* --exclude=/dev/* --exclude=/proc/* --exclude=/sys/* --exclude=".cache" --exclude="lost+found" --exclude=/tmp/* / /media/NAS/Martin/Backup/
+#restore
+1. boot from live usb
+2. mount NAS
+3. mkdir /mnt/system
+4. mkdir /mnt/usb
+5. lsblk (show names of devices)
+6. sda1 = system (10G size)
+7. sdb1 = usb
+8. mount /dev/sda1 /mnt/system/ mount system to the system folder
+9. mount /dev/sdb1 /mnt/usb mount usb to usb folder
+restore
+10. rsync -aAXc --delete --exclude="lost+found" /mnt/usb/ /mnt/system (kein /!)
+
+
+## mount
+
+(sudo) mount a-
+	--> /etc/fstab
+		--> //192.168.178.51/Kastner /media/NAS cifs credentials=/home/martin/Dokumente/cred/NAS_cred,uid=1000 0 0
+
+## eigene shell befehle:
+mycommand (ohne Endung) in /usr/bin ablegen --> shell [mycommand] führt das
+skrpt mycommand aus.

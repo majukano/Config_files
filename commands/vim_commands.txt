@@ -1,0 +1,120 @@
+### vim ###
+
+# Hilfe #
+F1 --> Hilfe
+strg + w, strg + w --> zwischen fenstern springen
+:q --> Fenster schließen
+:help befehl --> Hilfe zum Befehl
+      w --> Hilfe zum w befehl
+      c_CTRL-D
+      insert_index
+      user-manual
+      vimrc-intro
+
+# allgemien #
+einfüge modus -- i
+anfüge modus -- a
+kommando modus -- esc
+
+speichern - kommando modus -- :w
+beenden - kommando modus -- :q
+beenden ohne zu speichern -- :q!
+
+
+## normal mode ##
+
+x --> Zeichen unter kurser löschen
+a --> Text anfügen
+
+# d -- Löschparameter #
+dw --> löschne bis zum Ende des aktuellen Wortes (Curser am Wortanfang!)
+de --> löschen bis zum Ende des aktuellen Wortes
+d$ --> Bis zum Ende der Zeile löschen
+dd --> Zeile löschen
+Bewegung des Cursers entsprechend w, e, $
+
+# kombinationen: #
+d3w --> lösche die nächsten 3 Wörter
+3dd --> lösche die nächsten 2 Zeilen
+
+# schnell bewegen #
+0 --> Anfang der Zeile
+$ --> Ende der Zeile
+e --> Wort nach vorne
+3e --> 3 Wörter nach vorne
+
+# Rückgängig machen (Undo) #
+u --> letztes kommando rückgängig
+U --> letzte Zeile wiederherstellen (Ursprüngliche Zeile wieder herstellen.
+strg + R --> Rückgängig machung Rückgängig machen
+
+# Einfügen #
+p --> letzte Löschung unter dem Courser einfügen - (PUT)
+
+# Ersetzen #
+r(Zeichen) --> ersetzen eines Zeichens mit Zeichen - (REPLACE)
+R(Text) --> mehr als ein Zeichne ersetzen
+ce  --> löscht das Wort ab couser und ermöglicht die Änderung - (CHANGE)
+# kombinationen #
+c3w --> 3 Wörter
+c$ --> bis zum Ende der Zeile
+
+## Cursorpostion und Dateistatus ##
+strg + g --> Stausmeldung (Zeilenzahl)
+G --> Gehe zum Ende der Datei
+     + gg --> Gehe zum Anfang der Datei
+     x + Nummer --> Springe zur Zeilenzahl
+
+# Suchen #
+/ + Suchwort --> Vorwärtssuche
+  n --> weitersuchen (next)
+  N --> Rückwertssuche
+/suchwort\c für eine suchen nicht auf groß und kleinschreibung achten
+? + Suchwort --> Rückwärtssuche
+strg + o --> Zum Anfangspunkt zurück
+     o --> weiter zurück
+     i --> vorwärts
+
+# Klammerspringen #
+% --> zur dazugehörigen Klammer springen ([{ -> )]}
+
+#Suchen und Ersetzen #
+:s/alt/neu/g --> alt durch neu ersetzen, g --> die ganze Zeile vom Cursor
+:#,#s/alt/neu/g --> ersetzen, # --> Zeilennummer zum ersetzen
+:%s/alt/neu/g --> In der gesammten Datei ersetzen, ohne Fragen!!!
+:%s/alt/neu/gc --> Inder gesamten Datei ersetzen mit Fragen
+
+# Externe Kommandos z.B. shell Befehle (ls) #
+:! -- Lektion 5.1 --
+
+:w ~/Dokumente/TEST.txt --> Dokument wird unter dem Namen TEST.txt gespeichert
+:!rm ~/Dokumente/TEST.txt --> Dokument wird gelöscht
+
+# markieren #
+v --> markieren (Visual mode)
+  :w TEST --> speichern der Markierung in TEST
+  :r TESR --> Einfügen des Textes aus TEST in die akutell Datei
+
+:r !ls --> Einfugen der ls Ausgabe in die Akutell Datei
+
+# Einfügen #
+o --> Einfügen einer neuen Zeile unterhalb
+O --> Einfügen einer neuen Zeile unterhalb
+
+# Kopieren und Eingen #
+v --> markieren
+y --> kopieren
+p --> einfügen
+"+p --> einfügen von externen Programmen
+
+# optionen setzen #
+:set option--> setze option 
+	ic --> (ignore case) ignorier groß und kleinschreibung bei der Suche 
+	hls --> markiere alle Suchergebnisse
+	noic --> abschalten von ignore case
+	:nohlsearch
+
+# befehlsoptionen #
+befehl + strg + D = Auswahl möglicher optionen
+
+

@@ -1,0 +1,62 @@
+#### bewegen ####
+
+strg + v = nächste Seite
+strg + b = 
+strg + p = seite zurück
+strg + f =
+
+strg + a = zum Zeilen Anfang springen
+strg + e = zum zeilen Ende springen
+
+
+#### markieren ####
+
+[curser Zeilenanfang] strg + shift + Ende = Zeile markieren
+strg + space = start zum markieren
+
+
+#### kopieren einfügen ####
+
+Alt + w = kopieren
+strg + y = einfügen
+strg + w = ausschneiden
+
+
+#### suchen ####
+
+strg + s = suche starten
+strg + s = vorwerstssuche
+strg + r = rückwertssuche
+
+#### rechtschreibkorrektur ####
+
+alt + x : ispell-buffer
+alt + x : ispell-change-directory (sprache ändern)
+
+###################
+
+strg + / = Rückgängig (default) --> strg + 7 : alias 
+strg + x und strg + s = speichern
+strg + x und strg + c = schließen
+
+strg + x und strg + e = führe den Befehl links des cursers aus
+strg + x und strg + i : [Handbuchname] = öffne info-display-manual
+
+Öffnen Paketmanager: Alt + x [list-packages]
+
+Alt + x: global-linum-mode
+Alt + x: clm/toggle-command-log-buffer
+Alt + x: list-packages : auflistung aller inbuild pakete + update der pakete
+
+update emacs config direct: Alt-x: eval-buffer
+
+Menu öffnen mit F10
+
+#### paket installieren
+alt + x --> package.refresh.contents
+alt + x --> package-install
+package install: [paket] nord-theme
+
+#### themen durchschauen
+Alt + x : counsel-load-theme
+
